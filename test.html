@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>Covid 19 | Test</title>
-  </head>
-  <body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+        <link rel="stylesheet" href="./css/style.css" />
+        <title>Covid 19 | Test</title>
+    </head>
+    <body>
     <!-- Start Header Section -->
     <header class="header">
       <div class="header__content">
@@ -35,6 +34,37 @@
 
     <!-- Start Test Section -->
     <section class="test">
+/*
+        <div class="test__content">
+            <div class="test__header">
+            <ul class="test__list">
+                <li class="test__item active">
+                <span class="test__item__circle"></span>
+                <span class="test__item__text">Informations</span>
+                </li>
+                <li class="test__item">
+                <span class="test__item__circle"></span>
+                <span class="test__item__text">Questionaire</span>
+                </li>
+                <li class="test__item">
+                <span class="test__item__circle"></span>
+                <span class="test__item__text">Résultats</span>
+                </li>
+            </ul>
+            </div>
+            <div class="test__body">
+                <div id="numberQuestion"></div>
+                <div id="question"></div>
+                <div id="choix" ><input type="radio" name="choix" id=""><input type="radio" name="choix" id=""></div>
+                <div id="input" class="d-none"><input type="text"></div>
+            </div>
+            <button id="precedent">precedent</button>
+            <button id="suivant">suivant</button>
+
+        </div>
+*/
+      //conflit! alors j'ai garder le code ci dessue 
+      
       <div class="test__content">
         <div class="test__header">
           <ul class="test__list">
@@ -73,37 +103,40 @@
         </div>
         <button class="start__test">Démarrer le test</button>
       </div>
+//------------------------------------------------------------------------------
     </section>
     <!-- End Test Section -->
 
     <!-- Start Footer Section -->
     <footer class="footer">
-      <div class="footer__content">
-        <div class="footer__brand"><a href="./index.html">COVID-19</a></div>
-        <div class="footer__contact">
-          <h4 class="contact__title">Contact</h4>
-          <p class="contact__name">
-            Numéro économique - Allo veille épidémiologique
-          </p>
-          <p class="contact__number">080 100 47 47</p>
-          <p class="contact__name">Aide médicale urgente - Allo SAMU</p>
-          <p class="contact__number">141</p>
-          <p class="contact__name">la plateforme téléphonique- Allo 300</p>
-          <p class="contact__number">300</p>
+        <div class="footer__content">
+            <div class="footer__brand"><a href="./index.html">COVID-19</a></div>
+            <div class="footer__contact">
+            <h4 class="contact__title">Contact</h4>
+            <p class="contact__name">
+                Numéro économique - Allo veille épidémiologique
+            </p>
+            <p class="contact__number">080 100 47 47</p>
+            <p class="contact__name">Aide médicale urgente - Allo SAMU</p>
+            <p class="contact__number">141</p>
+            <p class="contact__name">la plateforme téléphonique- Allo 300</p>
+            <p class="contact__number">300</p>
+            </div>
+            <div class="footer__navbar">
+            <ul class="footer__list">
+                <li class="footer__item">
+                <a class="footer__link" href="#">Acceuil</a>
+                </li>
+                <li class="footer__item">
+                <a class="footer__link" href="#">Conseils</a>
+                </li>
+            </ul>
+            </div>
         </div>
-        <div class="footer__navbar">
-          <ul class="footer__list">
-            <li class="footer__item">
-              <a class="footer__link" href="#">Acceuil</a>
-            </li>
-            <li class="footer__item">
-              <a class="footer__link" href="#">Conseils</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
+        </footer>
     <!-- End Footer Section -->
-    <script src="script.js"></script>
-  </body>
+
+    <script src="js/question.js"></script>
+</body>
 </html>
+
