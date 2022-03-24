@@ -188,6 +188,13 @@ let input = document.getElementById('input');
 let countQuestion = quiz.length;
 let i = 0;  
 let j =1;
+
+const setProgress=function(nbr,text){
+    document.querySelector('.progress-area .progress').style.width=nbr+"%";
+    
+    document.querySelector('.progress-label').textContent=text;
+}
+
 numberQuestion.textContent = j;
 question.textContent = quiz[i].question;
 suivant.addEventListener('click' , function(){
