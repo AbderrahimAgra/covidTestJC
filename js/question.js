@@ -185,6 +185,8 @@ let suivant = document.getElementById('suivant');
 let precedent = document.getElementById('precedent');
 let choix = document.getElementById('choix');
 let input = document.getElementById('input');
+
+
 let countQuestion = quiz.length;
 let i = 0;  
 let j =1;
@@ -197,6 +199,9 @@ const setProgress=function(nbr,text){
 
 numberQuestion.textContent = j;
 question.textContent = quiz[i].question;
+
+
+
 suivant.addEventListener('click' , function(){
     console.log(quiz[i].type)
     if(i < countQuestion+1){
@@ -217,6 +222,10 @@ suivant.addEventListener('click' , function(){
         input.style.display = "flex";
 
     }
+    document.getElementById("progressBar").value += i;
+    LabelOfprogress.innerHTML='i';
+    document.getElementById("LabelOfprogress").innerHTML=i+1+"/22";
+
 })
 
 precedent.addEventListener('click' , function(){
@@ -228,5 +237,8 @@ precedent.addEventListener('click' , function(){
         j--;
         numberQuestion.textContent = j;
     }
+    document.getElementById("progressBar").value -= i;
+    LabelOfprogress.innerHTML='i';
+    document.getElementById("LabelOfprogress").innerHTML=i+1+"/22";
 
 })
