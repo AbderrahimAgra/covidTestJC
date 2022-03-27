@@ -265,3 +265,28 @@ a {
 }
 
 /* End Footer Section */
+
+/* start progress container  */
+/* #progressBar{
+  background-color: gba(0,0,0,.03);
+  padding: 0.75rem 1.25rem;;
+  border: 1px solid rgba(0,0,0,.125);
+  margin: 50px;
+}
+#progressBar{
+  display: inline-block;
+  height: 10px;
+  border-radius: 5px;
+  width:90%;
+  background-color:#E6F1F7;
+}
+#progressBar{
+  width:50%;
+  background-color: #1078AD ;
+  height: 100%;            
+}
+#progressBar{
+  font-weight: 700;
+  font-size:18px;
+} */
+/* end progress container  */
