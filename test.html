@@ -7,91 +7,124 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="css/bootstrap.css">
-
+        <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="./css/style.css" />
         <title>Covid 19 | Test</title>
     </head>
     <body>
     <!-- Start Header Section -->
-    <header class="header">
-      <div class="header__content">
-        <a class="brand__name" href="./index.html">COVID-19</a>
-        <nav>
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a class="nav__link" href="#">conseils</a>
-            </li>
-            <li class="nav__item"><a class="nav__link" href="#">accueil</a></li>
-            <li class="nav__item">
-              <a class="nav__link language" href="#"></a>
-            </li>
-          </ul>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-info2  navbar-light">
+            <div class="container-fluid px-5">
+                <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo" style="height: 40px; width: 45px;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="d-flex ms-auto">
+                        <a class="nav-link fs-5 text-dark me-4"  href="#">Conseils</a>
+                        <a class="nav-link fs-5 text-dark" href="#">Accueil</a>
+                        <button class="btn rounded-circle shadow-none" ><img src="img/icon-arab.png" alt="arabic" style="width: 30px; height: 30px;"></button>
+                    </div>
+                </div>
+            </div>
         </nav>
-      </div>
     </header>
     <!-- End Header Section -->
 
     <!-- Start Test Section -->
-    <section class="test">
-        <div class="test__content">
-            <div class="test__header">
-            <ul class="test__list">
-                <li class="test__item active">
-                <span class="test__item__circle"></span>
-                <span class="test__item__text">Informations</span>
-                </li>
-                <li class="test__item">
-                <span class="test__item__circle"></span>
-                <span class="test__item__text">Questionaire</span>
-                </li>
-                <li class="test__item">
-                <span class="test__item__circle"></span>
-                <span class="test__item__text">Résultats</span>
-                </li>
-            </ul>
+    <div id="carouselExampleControls" class="carousel slide " data-bs-ride="carousel" data-wrap="false">
+    <section class="test container px-6">
+        <div class="test__header ">
+        <ul class="test__list">
+            <li class="test__item active">
+            <span class="test__item__circle"></span>
+            <span class="test__item__text">Informations</span>
+            </li>
+            <li class="test__item">
+            <span class="test__item__circle"></span>
+            <span class="test__item__text">Questionaire</span>
+            </li>
+            <li class="test__item">
+            <span class="test__item__circle"></span>
+            <span class="test__item__text">Résultats</span>
+            </li>
+        </ul>
+        </div>
+        <!-- Start Demarer test -->
+        <div class="test__body carousel-item active d-flex flex-column justify-content-center align-items-center">
+            <div class="body__content">
+                <h4 class="body__title">Préambule</h4>
+                <p class="body__description">
+                    L’application est fournie à titre gratuit, en l’état, uniquement à
+                    des fins d’information pour contribuer à fluidifier la prise en
+                    charge des personnes par les services d’urgences pendant
+                    l’épidémie de Coronavirus COVID-19. L’exhaustivité, l’exactitude,
+                    le caractère à jour des informations et contenus mis à disposition
+                    dans cette application, ou leur adéquation à des finalités
+                    particulières, ne sont pas garantis.
+                    <span class="body__line"></span>
+                    Cette application ne substitue pas votre médecin qui est plus apte
+                    à vous donner plus de précision. Les informations de cette
+                    application est le premier niveau de la détection des cas
+                    possibles du COVID-19.
+                </p>
             </div>
-            <div class="test__body">
-                <div id="numberQuestion"></div>
-                <div id="question"></div>
-                <div id="choix" ><input type="radio" name="choix" id=""><input type="radio" name="choix" id=""></div>
-                <div id="input" class="d-none"><input type="text"></div>
+            <div>
+                <button class="btn btn-outline-info fs-5 fw-bold mt-5" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                Démarrer le test
+                </button>
             </div>
-            <button id="precedent">precedent</button>
-            <button id="suivant">suivant</button>
-
+        </div>
+        <!-- End-->
+        <div class="test__content card carousel-item ">
+            <div class="card-header">
+                <div class="progress" id="progress"><div id="numberQuestion"></div></div>
+            </div>
+            <div class="test__body card-body px-6">
+                <div class=" d-flex flex-column justify-content-center align-items-center mb-5">
+                    <div id="question" class="card-text fs-2 fw-bolder text-black-50 my-5 mx-4" ></div>
+                    <div id="answer" class="d-flex justify-content-between align-items-center mt-5"> </div>
+                </div>
+                <div class="test__footer d-flex justify-content-between align-items-center mt-4 py-5 ">
+                    <button id="precedent" class="btn btn-outline-info fw-bold rounded-3 fs-5 px-5 shadow-none" >precedent</button>
+                    <button id="next" class="btn btn-outline-info fw-bold rounded-3 fs-5 px-5 shadow-none">suivant</button>
+                </div>
+            </div>
         </div>
     </section>
     <!-- End Test Section -->
-
-    <!-- Start Footer Section -->
-    <footer class="footer">
-        <div class="footer__content">
-            <div class="footer__brand"><a href="./index.html">COVID-19</a></div>
-            <div class="footer__contact">
-            <h4 class="contact__title">Contact</h4>
-            <p class="contact__name">
-                Numéro économique - Allo veille épidémiologique
-            </p>
-            <p class="contact__number">080 100 47 47</p>
-            <p class="contact__name">Aide médicale urgente - Allo SAMU</p>
-            <p class="contact__number">141</p>
-            <p class="contact__name">la plateforme téléphonique- Allo 300</p>
-            <p class="contact__number">300</p>
+</div>
+        <!-- Start Footer Section -->
+        <footer class=" position-absolute top-100 w-100">
+            <div class=" d-flex justify-content-center align-content-center mb-5"><a href="#"><img src="img/logo.png" alt="logo" style="height: 70px; width: 90px;"></a></div>
+            <div class=" d-flex  justify-content-around align-items-center mb-5">
+                <div class=" text-center me-2">
+                    <h4 class=" text-info fs-4 fw-bold mb-3">Contacts utiles</h4>
+                    <p class=" text-black fw-bold mb-1">Numéro économique - Allo veille épidémiologique</p>
+                    <p class=" text-success fw-bold fs-5 mb-1">080 100 47 47</p>
+                    <p class=" text-black fw-bold mb-1">Aide médicale urgente - Allo SAMU</p>
+                    <p class=" text-success fw-bold fs-5 mb-1">141</p>
+                    <p class=" text-black fw-bold mb-1">la plateforme téléphonique- Allo 300</p>
+                    <p class=" text-success fw-bold fs-5 mb-1">300</p>
+                </div>
+                <div class=" ms-2 ">
+                    <ul class=" list-unstyled ">
+                        <li class="">
+                            <a class="nav-link fs-5 text-dark text-decoration-none" href="#">Acceuil</a>
+                            <hr>
+                        </li>
+                        <li >
+                            <a class="nav-link fs-5 text-dark text-decoration-none" href="#">Conseils</a>
+                            <hr>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer__navbar">
-            <ul class="footer__list">
-                <li class="footer__item">
-                <a class="footer__link" href="#">Acceuil</a>
-                </li>
-                <li class="footer__item">
-                <a class="footer__link" href="#">Conseils</a>
-                </li>
-            </ul>
-            </div>
-        </div>
+            <div class="container-fluid bg-info1 py-3 mb-0 mt-5 "></div>
         </footer>
-    <!-- End Footer Section -->
+        <!-- End Footer Section -->
+    <script src="js/bootstrap.js"></script>
     <script src="js/question.js"></script>
 </body>
 </html>
