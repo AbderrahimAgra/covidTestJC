@@ -213,23 +213,19 @@ let j =1;
 function getRadioValue(){
     let res ;
     for (let i = 0; i < radios.length; i++) {
-        radios[i].addEventListener('change',function(){
-            for (let i = 0; i < radios.length; i++) {
                 if (radios[i].checked) {
-                    res = this.value;            
-                    console.log(res) ;
-                    }
+                        res = radios[i].value;
+                    break;
                 }
-            })
-        }
-    return res;            
+    }
+    return res;
 }
 
 function getNumberValue(){
-input.addEventListener('mouseup' , function(){
+// input.addEventListener('mouseup' , function(){
     input.setAttribute("value", input.value);
     return input.value;
-})
+// })
 }
 
 function afficheProgress(){
@@ -260,7 +256,6 @@ function afficheAnswer(){
         input.min = questions[i].min;
         input.max = questions[i].max;
         input.placeholder = questions[i].min + " - " + questions[i].max;
-        
     }
     if(questions[i].typeQuestion === "choix" ){
         answer.innerHTML = "";
@@ -288,11 +283,12 @@ function afficheAnswer(){
 }
 
 afficheAnswer()
+
 next.addEventListener('click' , function(){
     if(questions[i].typeQuestion === "choix"){
         console.log('choix')
         questions[i].reponse = getRadioValue();
-        console.log(questions[i].reponse);
+        console.log(questions[i]);
     }
     if(questions[i].typeQuestion === "text"){
         console.log('text')
@@ -312,7 +308,7 @@ precedent.addEventListener('click' , function(){
     if(i > 0){
         i--;
     }
-        afficheAnswer()
+    afficheAnswer()
 
 })
 
