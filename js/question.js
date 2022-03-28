@@ -322,7 +322,7 @@ next.addEventListener('click' , function(){
  * @param  message 
  */
 function displayResultInDom(message){
-
+    
 }
 
 precedent.addEventListener('click' , function(){
