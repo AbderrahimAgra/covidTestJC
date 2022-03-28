@@ -191,15 +191,8 @@ let countQuestion = quiz.length;
 let i = 0;  
 let j =1;
 
-/*
 
-const setProgress=function(nbr,text){
-    document.querySelector('.progress-area .progress').style.width=nbr+"%";
-    
-    document.querySelector('.progress-label').textContent=text;
-}
 
-*/
 
 numberQuestion.textContent = j;
 question.textContent = quiz[i].question;
@@ -226,10 +219,10 @@ suivant.addEventListener('click' , function(){
         input.style.display = "flex";
 
     }
-    document.getElementById("progressBar").value += i;
-    LabelOfprogress.innerHTML='i';
-    document.getElementById("LabelOfprogress").innerHTML=i+1+"/22";
-
+    // document.getElementById("progressBar").value += i;
+    // LabelOfprogress.innerHTML='i';
+    // document.getElementById("LabelOfprogress").innerHTML=i+1+"/22";
+        updateProgress();
 })
 
 precedent.addEventListener('click' , function(){
@@ -241,8 +234,12 @@ precedent.addEventListener('click' , function(){
         j--;
         numberQuestion.textContent = j;
     }
-    document.getElementById("progressBar").value -= i;
-    LabelOfprogress.innerHTML='i';
-    document.getElementById("LabelOfprogress").innerHTML=i+1+"/22";
+   updateProgress();
 
 })
+function updateProgress(){
+    let progress=j/quiz.length;
+    document.querySelector('.progress-area .progress').style.width=(progress*100)+"%";
+    document.querySelector('.progress-label').textContent=j+"/"+quiz.length;
+}
+updateProgress();
