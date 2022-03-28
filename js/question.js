@@ -206,7 +206,7 @@ const precedent = document.getElementById('precedent');
 const radios = document.getElementsByName('choix');
 let countQuestion = questions.length;
 let i = 0;  
-let j =1;
+let data = [];
 
 
 
@@ -285,23 +285,32 @@ function afficheAnswer(){
 afficheAnswer()
 
 next.addEventListener('click' , function(){
+
     if(questions[i].typeQuestion === "choix"){
-        console.log('choix')
+        if(getRadioValue() === undefined ) return;
         questions[i].reponse = getRadioValue();
-        console.log(questions[i]);
+        data.push(questions[i].reponse);
     }
+
+
+
     if(questions[i].typeQuestion === "text"){
-        console.log('text')
+        if(getNumberValue() === "" ) return;
+        console.log(getNumberValue());
         questions[i].reponse = getNumberValue();
-        console.log(questions[i].reponse);
+        data.push(questions[i].reponse);
     }
+
+
+
+
     if(i < countQuestion-1){
         i++;
     }
     if(i <= countQuestion-1){
         afficheAnswer()
     }
-    
+    console.log(data)
 })
 
 precedent.addEventListener('click' , function(){
@@ -309,7 +318,6 @@ precedent.addEventListener('click' , function(){
         i--;
     }
     afficheAnswer()
-
 })
 
 ///////start testing results 
