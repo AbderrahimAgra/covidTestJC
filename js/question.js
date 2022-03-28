@@ -296,7 +296,6 @@ next.addEventListener('click' , function(){
 
             if(questions[i].typeQuestion === "text"){
                 if(getNumberValue() === "" ) return;
-                console.log(getNumberValue());
                 questions[i].reponse = getNumberValue();
                 data.push(questions[i].reponse);
             }
@@ -352,9 +351,9 @@ const getPronoFact=(poorPronoFact)=>{
     if (poorPronoFact.age >= 70 || poorPronoFact.imc >= 30 || poorPronoFact.pregnancy || poorPronoFact.breathingIllness || poorPronoFact.cancer || poorPronoFact.chronicLiverDisease
         || poorPronoFact.chronicRenalFailure || poorPronoFact.diabetes || poorPronoFact.heartDisease || poorPronoFact.immuneSystemDisease || poorPronoFact.immunosuppressiveTherapy) {
         return true;
-      } else {
+    } else {
         return false;
-      }
+    }
 
 };
 
