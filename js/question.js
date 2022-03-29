@@ -334,8 +334,12 @@ next.addEventListener('click', function () {
  * @param  message
  */
 function displayResultInDom(message) {
-  console.log('hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh');
-  console.log(message);
+  document.querySelector('.test__content').innerHTML = `<div class="result">
+  <h3 class="result__title">Résultat</h3>
+  <p class="result__message">وحال واش فيك فيروس كورونا، إذا عندك شك اتصل بالطبيب ديالك. تقد تعاود الإختبار لكانوا عندك اعراض اخرى. لبغيتي تعرف اكثر على الڤيروس ممكن تشوف صفحة النصائح</p>
+  <p class="result__footer">Restez chez vous au maximum en attendant que les symptômes disparaissent. Prenez votre température deux fois par jour. Rappel des mesures d’hygiène.</p>
+  <a class="restart-test-btn" href="test.html">Recommencer le test</a>
+  </div>`;
 }
 
 precedent.addEventListener('click', function () {
