@@ -47,11 +47,11 @@
     <section class="test container px-6">
         <div class="test__header">
             <ul class="test__list">
-            <li class="test__item">
+            <li class="test__item active" >
                 <span class="test__item__circle"></span>
                 <span class="test__item__text">Informations</span>
             </li>
-            <li class="test__item active">
+            <li class="test__item ">
                 <span class="test__item__circle"></span>
                 <span class="test__item__text">Questionaire</span>
             </li>
@@ -61,8 +61,29 @@
             </li>
             </ul>
         </div>
+        <!-- start -->
+        <div class="body__content" id="start">
+            <h4 class="body__title">Préambule</h4>
+            <p class="body__description">
+                L’application est fournie à titre gratuit, en l’état, uniquement à
+                des fins d’information pour contribuer à fluidifier la prise en
+                charge des personnes par les services d’urgences pendant
+                l’épidémie de Coronavirus COVID-19. L’exhaustivité, l’exactitude,
+                le caractère à jour des informations et contenus mis à disposition
+                dans cette application, ou leur adéquation à des finalités
+                particulières, ne sont pas garantis.
+                <span class="body__line"></span>
+                Cette application ne substitue pas votre médecin qui est plus apte
+                à vous donner plus de précision. Les informations de cette
+                application est le premier niveau de la détection des cas
+                possibles du COVID-19.
+            </p>
+            <div>
+            <a  class="start__test" id="demar">Démarrer le test</a>
+            </div>
+        </div>
         <!-- End-->
-        <div class="test__content card">
+        <div class="test__content card" id ="test" style="display: none;">
             <div class="card-header">
                 <div class="progress" id="progress">
                     <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" >

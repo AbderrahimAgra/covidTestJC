@@ -216,7 +216,10 @@ const questions = [
       reponse: null,
     },
   ];
-  
+  const activecer = document.getElementsByTagName('li');
+  const demar = document.querySelector('#demar');
+  const start = document.querySelector('#start');
+  const test = document.querySelector('#test');
   const progress = document.querySelector('.progress-bar');
   const numberQuestion = document.getElementById('numberQuestion');
   const question = document.getElementById('question');
@@ -229,7 +232,12 @@ const questions = [
   let countQuestion = questions.length;
   let i = 0;
   let data = [];
-  
+  demar.addEventListener("click",function(){
+    activecer[0].className= "test__item";
+    activecer[1].className= "test__item active";
+    start.style.display="none";
+    test.style.display="block";
+  })
   function getRadioValue() {
     let res;
     for (let i = 0; i < radios.length; i++) {
@@ -240,7 +248,7 @@ const questions = [
     }
     return res;
   }
-  
+  activecer[0].className= "test__item active";
   function getNumberValue() {
     // input.addEventListener('mouseup' , function(){
     input.setAttribute('value', input.value);
@@ -325,29 +333,34 @@ const questions = [
       console.log('the result is ' + message);
       displayResultInDom(message);
     }
-    //console.log(data)
+    console.log(data)
   });
   
+  precedent.addEventListener('click', function () {
+    if (i > 0) {
+      i--;
+      data.pop();
+      console.log(data);
+    }
+    afficheAnswer();
+  });
   /**
    * this should take the message and insert in the dom
    * TODO:: hassan
    * @param  message
    */
   function displayResultInDom(message) {
+    activecer[0].className= "test__item";
+    activecer[1].className= "test__item";
+    activecer[2].className= "test__item active";
     document.querySelector('.test__content').innerHTML = `<div class="result">
     <h3 class="result__title">Résultat</h3>
-    <p class="result__message">وحال واش فيك فيروس كورونا، إذا عندك شك اتصل بالطبيب ديالك. تقد تعاود الإختبار لكانوا عندك اعراض اخرى. لبغيتي تعرف اكثر على الڤيروس ممكن تشوف صفحة النصائح</p>
+    <p class="result__message">${message}</p>
     <p class="result__footer">Restez chez vous au maximum en attendant que les symptômes disparaissent. Prenez votre température deux fois par jour. Rappel des mesures d’hygiène.</p>
     <a class="restart-test-btn" href="test.html">Recommencer le test</a>
     </div>`;
   }
   
-  precedent.addEventListener('click', function () {
-    if (i > 0) {
-      i--;
-    }
-    afficheAnswer();
-  });
   
   ///////start testing results
   const getFactGravMin = (symptomps) => {
